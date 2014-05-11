@@ -1,0 +1,133 @@
+﻿body {
+    background: #888;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+body h1,
+body h2 {
+    color: #800;
+}
+
+body h3,
+body h4,
+body p {
+    color: #fff;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.jumbotron {
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: inherit;
+  background-color: #eeeeee;
+  border: 5px solid #800;
+}
+
+.jumbotron h1 {
+  text-align: center;
+    text-shadow: 20px 12px 12px #bbb;
+    color: #800;
+    font-family: inherit;
+    font-size: 48px;
+}
+
+.jumbotron p {
+  line-height: 1.4;
+}
+
+.container .jumbotron {
+  border-radius: 6px;
+}
+
+@media screen and (min-width: 768px) {
+  .jumbotron {
+    border: 5px solid #800;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .container .jumbotron {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .jumbotron h1 {
+    text-align: center;
+    text-shadow: 20px 12px 12px #bbb;
+    color: #800;
+    font-family: Narkisim;
+    font-size: 160px;
+  }
+}
+
+.col-md-4 h2 {
+    color: #800;
+}
+
+.col-md-4 p {
+    color: #fff;
+}
+
+.navbar-inverse {
+  background-color: #800;
+  border-color: #080808;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #bbb;
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-brand {
+   color: #fff;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #bbb;
+  background-color: transparent;
+}
