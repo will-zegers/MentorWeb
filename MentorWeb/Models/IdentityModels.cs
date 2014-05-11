@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 
 namespace MentorWeb.Models
 {
@@ -9,6 +10,7 @@ namespace MentorWeb.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Profile> Profiles { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection")
         {

@@ -10,9 +10,15 @@ body h2 {
 }
 
 body h3,
-body h4,
+body h4 {
+    color: #800;
+}
+
 body p {
     color: #fff;
+}
+
+td {
 }
 
 /* Set padding to keep content from hitting the edges */

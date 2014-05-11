@@ -1,0 +1,27 @@
+﻿@model MentorWeb.Models.Profile
+
+@{
+    ViewBag.Title = "User Profile";
+}
+
+<h2>User Profile</h2>
+
+<table>
+    <tr>
+        <td><h3>@Html.DisplayNameFor(model => model.FirstName):</h3></td>
+        <td><h4>@Html.DisplayFor(modelItem => Model.FirstName)</h4></td>
+    </tr>
+    <tr>
+        <td><h3>@Html.DisplayNameFor(model => model.LastName):</h3></td>
+        <td><h4>@Html.DisplayFor(modelItem => Model.LastName)</h4></td>
+    </tr>
+    <tr>
+        <td><h3>@Html.DisplayNameFor(model => model.Bio):</h3></td>
+        <td><h4>@Html.DisplayFor(modelItem => Model.Bio)</h4></td>
+    </tr>
+    <tr>
+        <td><h3>@Html.DisplayNameFor(model => model.Gender):</h3></td>
+        <td><h4>@Html.DisplayFor(modelItem => Model.Gender)</h4></td>
+    </tr>
+    </tr>
+</table>
