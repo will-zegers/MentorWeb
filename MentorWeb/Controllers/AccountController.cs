@@ -12,6 +12,7 @@ using MentorWeb.Models;
 
 namespace MentorWeb.Controllers
 {
+    // test
     [Authorize]
     public class AccountController : Controller
     {
