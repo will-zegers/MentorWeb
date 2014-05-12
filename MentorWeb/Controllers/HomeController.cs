@@ -86,13 +86,15 @@ namespace MentorWeb.Controllers
             skillList.AddRange(descList.Distinct());
             ViewBag.searchSkill = new SelectList(skillList);
 
+            /*
             var existingRelations = from e in db.Relationships select e.mentorID;
             List<string> existingRelationsList = new List<string>();
             existingRelationsList = existingRelations.ToList();
+             */
 
             foreach (var item in db.Skills)
             {
-                if (item.UserName != this.User.Identity.GetUserName() && !existingRelationsList.Contains(item.ProfileID))
+                if (item.UserName != this.User.Identity.GetUserName())
                 {
                     System.Diagnostics.Debug.WriteLine("test: " + searchSkill);
                     // no skill, no minimum experience
