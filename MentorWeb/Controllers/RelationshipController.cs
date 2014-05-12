@@ -125,6 +125,8 @@ namespace MentorWeb.Controllers
             base.Dispose(disposing);
         }
 
+
+        // get mentees to display
         public ActionResult Mentees()
         {
             // wasn't working -- not recognized as a list / can't iterate
@@ -160,7 +162,33 @@ namespace MentorWeb.Controllers
                 }
             }
             return View(profiles);
-
         }
+
+        // get mentors to display
+        public ActionResult Mentors()
+        {
+            string currentID = this.User.Identity.GetUserId();
+            var user = from p in db.Relationships select p;
+            List<string> ids = new List<string>();
+            List<Profile> profiles = new List<Profile>();
+
+            user = user.Where(s => s.menteeID == currentID);
+            foreach (var item in user)
+            {
+                string id = item.mentorID;
+                ids.Add(id);
+            }
+
+            foreach (var idItem in ids)
+            {
+                foreach (var profileItem in db.Profiles)
+                {
+                    if (profileItem.ID == idItem)
+                        profiles.Add(profileItem);
+                }
+            }
+            return View(profiles);
+        }
+
     }
 }
