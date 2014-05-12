@@ -278,6 +278,7 @@
     <Content Include="Views\Relationship\Mentees.cshtml" />
     <Content Include="Views\Home\Match.cshtml" />
     <Content Include="Views\Home\Chat.cshtml" />
+    <Content Include="Views\Relationship\Mentors.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
