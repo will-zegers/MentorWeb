@@ -15,5 +15,7 @@ namespace MentorWeb.Models
             : base("DefaultConnection")
         {
         }
+
+        public System.Data.Entity.DbSet<MentorWeb.Models.Skill> Skills { get; set; }
     }
 }
