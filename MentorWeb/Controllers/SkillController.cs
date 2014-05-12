@@ -57,10 +57,11 @@ namespace MentorWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="ID,Description,YearsExperience,ProfileID")] Skill skill)
+        public ActionResult Create([Bind(Include="ID,Description,YearsExperience,ProfileID,UserName")] Skill skill)
         {
             if (ModelState.IsValid)
             {
+                skill.UserName = this.User.Identity.GetUserName();
                 skill.ProfileID = this.User.Identity.GetUserId();
                 db.Skills.Add(skill);
                 db.SaveChanges();

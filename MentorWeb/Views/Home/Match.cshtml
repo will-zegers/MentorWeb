@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MentorWeb.Models.Skill>
+
+@{
+    ViewBag.Title = "Match";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @using (Html.BeginForm())
+    {
+    <p>
+        Skill: @Html.DropDownList("searchSkill", "All") <br />
+        Minimum Years: @Html.TextBox("min") <br />
+        <input type="submit" value="Match" />
+    </p>
+    }
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayName("User Name")
+            </th>
+            <th>
+                @Html.DisplayName("Skill")
+            </th>
+            <th>
+                @Html.DisplayName("Years of Experience")
+            </th>
+        </tr>
+
+
+        @if (Model.Count() > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.YearsExperience)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Add", "AddRelationship", new { id = item.ID })
+                    </td>
+                </tr>
+            }
+        }
+    </table>
