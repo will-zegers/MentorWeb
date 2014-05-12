@@ -23,7 +23,7 @@
                 <ul class="nav navbar-nav">
                    @if (Request.IsAuthenticated)
                     {
-                        <li>@Html.ActionLink("Profile", "About", "Home")</li>
+                        <li>@Html.ActionLink("Profile", "Index", "Profile")</li>
                         <li>@Html.ActionLink("Match", "Contact", "Home")</li>
                    }
                         <li>@Html.ActionLink("Search", "Contact", "Home")</li>
