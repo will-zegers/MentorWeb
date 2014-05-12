@@ -1,0 +1,42 @@
+﻿@model MentorWeb.Models.Relationship
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Relationship</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.mentorID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mentorID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.menteeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.menteeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.accepted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.accepted)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.rID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

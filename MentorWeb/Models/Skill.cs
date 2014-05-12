@@ -14,5 +14,6 @@ namespace MentorWeb.Models
         [ForeignKey("Profile")]
         public string ProfileID { get; set; }
         public Profile Profile { get; set; }
+        public string UserName { get; set; }
     }
 }

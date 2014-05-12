@@ -17,5 +17,7 @@ namespace MentorWeb.Models
         }
 
         public System.Data.Entity.DbSet<MentorWeb.Models.Skill> Skills { get; set; }
+
+        public System.Data.Entity.DbSet<MentorWeb.Models.Relationship> Relationships { get; set; }
     }
 }

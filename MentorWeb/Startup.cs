@@ -9,6 +9,7 @@ namespace MentorWeb
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            app.MapSignalR();
         }
     }
 }

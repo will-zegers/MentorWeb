@@ -1,0 +1,48 @@
+﻿@model MentorWeb.Models.Relationship
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Relationship</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.mentorID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mentorID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.menteeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.menteeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.accepted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.accepted)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
